@@ -1,20 +1,19 @@
-# Desafio Xadrez - Nível Aventureiro
+# Desafio Xadrez - Nível Mestre
 
-**Aluno:** Luiz Fellipe Rodrigues da Silva
+**Nome do Aluno:** Luiz Fellipe Rodrigues da Silva
 
 ---
 
-Esse é mais um projeto para a matéria, agora atualizado para o **Nível Aventureiro**.
+Desafio muito importante para aprendizagem, agora finalizado com o **Nível Mestre**.
 
-Meu foco principal de estudos é em Python, então fazer esse trabalho em C foi um desafio de verdade. Continuar evoluindo o projeto e usando os diferentes loops (`for`, `while`, `do-while`) foi uma experiência bem legal para aprender mais sobre a linguagem.
+Fazer esse projeto em C foi bem desafiador. O Nível Mestre foi o que mais deu trabalho, principalmente a parte de recursividade. Quebrar a cabeça para entender como fazer a função funcionar foi difícil, mas sinto que foi o que mais me ensinou sobre a linguagem.
 
 ### O que o código faz agora:
 
-O programa `xadrez.c` ainda simula os movimentos da **Torre**, **Bispo** e **Rainha** do Nível Novato, cada um com um loop diferente.
+O programa `xadrez.c` agora é bem mais complexo:
 
-A novidade do Nível Aventureiro é a **movimentação do Cavalo**.
-
-Para fazer o movimento em "L" (dois passos para baixo e um para esquerda), eu usei um loop `for` para simular os dois passos para "Baixo" e, em seguida, um loop `while` para simular o passo para "Esquerda", como foi pedido no desafio.
+* **Torre, Bispo e Rainha (Recursivos):** Eu tirei os loops `for` e `while` simples de antes. Agora, cada uma dessas peças tem sua própria **função recursiva** que faz o movimento passo a passo até a condição de parada (o "caso base") ser atingida.
+* **Cavalo (Atualizado):** O movimento do Cavalo mudou para "dois para cima e um para a direita". Para fazer isso, eu mantive a lógica de usar um loop `for` para os 2 passos "Cima" e um loop `while` para o passo "Direita", para a saída ficar correta como o professor pediu.
 
 ### Para testar
 
@@ -29,41 +28,46 @@ Para fazer o movimento em "L" (dois passos para baixo e um para esquerda), eu us
 ---
 ---
 
-## Descrição Original do Desafio (Nível Aventureiro)
+## Descrição Original do Desafio (Nível Mestre)
 
-### Desafio: nível aventureiro
+### Desafio: nível mestre
 
-Movimentando o Cavalo
+Criando Movimentos Complexos
 
-Neste desafio, você dará continuidade ao programa do nível básico, adicionando a lógica para movimentar o Cavalo no tabuleiro de xadrez. A principal diferença é que o Cavalo se move em "L", o que exigirá o uso de loops aninhados (um loop dentro do outro) para simular esse movimento.
+Neste desafio final, você aprimorará o programa de xadrez que vem desenvolvendo, explorando técnicas avançadas de programação para simular os movimentos das peças. Prepare-se para usar recursividade e loops complexos!
 
 **O que você vai fazer**
 
-Você deverá implementar, no mesmo programa em C do desafio anterior, a lógica para o movimento do Cavalo. O Cavalo se move duas casas em uma direção (horizontal ou vertical) e depois uma casa perpendicularmente, formando um "L". Para este desafio, o Cavalo deverá se mover duas casas para baixo e uma casa para a esquerda. Você precisará usar pelo menos dois loops aninhados, sendo um deles obrigatoriamente um loop for. O outro loop pode ser while ou do-while, à sua escolha. Assim como nas outras peças, você imprimirá a direção do movimento a cada casa percorrida.
+Você deverá modificar o programa em C, que já contém a movimentação da Torre, Bispo, Rainha e Cavalo, realizando as seguintes alterações:
+
+- **Recursividade:** Substitua os loops simples que controlam os movimentos da Torre, Bispo e Rainha por funções recursivas. Cada função recursiva deverá simular o movimento da respectiva peça, imprimindo a direção correta a cada casa.
+- **Loops Complexos para o Cavalo:** Aprimore a movimentação do Cavalo, utilizando loops aninhados com múltiplas variáveis e/ou condições. Você pode usar continue e break para controlar o fluxo do loop de forma mais precisa. O movimento do Cavalo agora será para cima e para a direita, em "L" (duas casas para cima e uma para a direita).
+- **Bispo com Loops Aninhados:** O Bispo deve ser implementado com recursividade, e também com loops aninhados, utilizando o loop mais externo para o movimento vertical, e o mais interno para o movimento horizontal.
 
 **Requisitos funcionais**
 
-- **Entrada de Dados:** Os valores para o número de casas a serem movidas (duas para baixo, uma para a esquerda) devem ser definidos no código como variáveis ou constantes.
-- **Lógica de Movimentação:** O programa deverá implementar a lógica específica do movimento em "L" do Cavalo usando loops aninhados (um loop for e um loop while ou do-while).
-- **Saída de Dados:** O programa deverá imprimir no console a direção de cada etapa do movimento do Cavalo ("Baixo", "Baixo", "Esquerda"), utilizando o comando printf. Para as outras peças as saídas devem seguir o padrão: `printf("Cima\n");`, `printf("Baio\n");`, `printf("Esquerda\n");`, `printf("Direita\n");`. Separe o movimento do Cavalo dos movimentos anteriores com uma linha em branco.
+- **Entrada de Dados:** Os valores para o número de casas a serem movidas (para recursão) e as condições dos loops (para o Cavalo) devem ser definidos diretamente no código, como variáveis ou constantes.
+- **Recursividade (Torre, Bispo e Rainha):** Implemente funções recursivas para simular o movimento de cada peça, substituindo os loops originais.
+- **Loops Complexos (Cavalo):** Utilize loops aninhados com múltiplas variáveis e/ou condições para simular o movimento do Cavalo em "L" (duas casas para cima e uma para a direita).
+- **Loops Aninhados (Bispo):** Utilize loops aninhados para o bispo, sendo o loop mais externo o vertical, e o mais interno o horizontal.
+- **Saída de Dados:** O programa deverá imprimir no console, de forma clara e organizada, a direção do movimento a cada casa percorrida por cada peça. Utilize o comando printf para exibir as informações. As saídas devem seguir o padrão: `printf("Cima\n");`, `printf("Baixo\n");`, `printf("Esquerda\n");`, `printf("Direita\n");`. Utilize linhas em branco para separar a saída de cada peça.
 
 **Requisitos não funcionais**
 
-- **Performance:** O código deve ser eficiente e executar sem atrasos perceptíveis.
-- **Documentação:** O código deve ser bem documentado com comentários claros, explicando a lógica do movimento do Cavalo e a utilização dos loops aninhados.
-- **Legibilidade:** O código deve ser claro, organizado, fácil de entender, com nomes de variáveis descritivos, indentação adequada e seguindo as boas práticas de programação em C. Utilize apenas variáveis do tipo inteiro e string.
+- **Performance:** O código deve ser eficiente e executar sem atrasos perceptíveis. Evite chamadas recursivas excessivas que possam levar a um estouro de pilha (stack overflow).
+- **Documentação:** O código deve ser bem documentado, com comentários detalhados explicando a lógica da recursividade, o funcionamento dos loops complexos e o propósito de cada variável e condição.
+- **Legibilidade:** O código deve ser claro, organizado e fácil de entender, com nomes de variáveis descritivos e indentação adequada. Utilize apenas variáveis do tipo inteiro e string.
 
-**Simplificações para o nível intermediário**
+**Simplificações para o nível avançado**
 
 - Não é necessário validar a entrada do usuário.
-- Não é necessário implementar outras regras do xadrez além do movimento específico do Cavalo solicitado.
-- Você pode assumir que o Cavalo sempre começa na posição inicial (definida por você).
+- Não é necessário implementar outras regras do xadrez além dos movimentos específicos solicitados.
 
 **Entregando seu projeto**
 
-- Continue desenvolvendo o projeto no mesmo repositório do GitHub do desafio anterior.
-- Atualize o arquivo xadrez.c com a implementação do movimento do Cavalo, mantendo o código das peças anteriores.
+- Continue desenvolvendo o projeto no mesmo repositório do GitHub dos desafios anteriores.
+- Atualize o arquivo xadrez.c com as implementações da recursividade (Torre, Bispo e Rainha) e dos loops complexos (Cavalo), mantendo a estrutura geral do código.
 - Certifique-se de que todos os requisitos funcionais e não funcionais sejam atendidos.
 - Após finalizar o projeto, envie o link atualizado do seu repositório do GitHub no SAVA, na atividade correspondente a este desafio.
 
-Lembre-se: este desafio avalia sua capacidade de aplicar loops aninhados para resolver um problema específico. Demonstre suas habilidades de forma clara, concisa e eficiente!
+Este desafio final é a coroação de sua jornada no aprendizado das estruturas de repetição. Demonstre suas habilidades, explore as possibilidades e crie um código elegante e eficiente!
