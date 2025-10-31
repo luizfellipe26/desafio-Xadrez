@@ -1,5 +1,5 @@
 // Luiz Fellipe Rodrigues da Silva
-// Desafio Xadrez - Nivel Novato
+// Desafio Xadrez - Nivel Aventureiro
 
 #include <stdio.h>
 
@@ -14,11 +14,7 @@ int main() {
     // ---------------------------------------------
     printf("--- Movimento da Torre (5 casas para a direita) ---\n");
     
-    // Usando 'for' porque é o loop mais simples quando 
-    // ja sabemos o numero exato de passos (5).
-    // i = 0 (começa no 0)
-    // i < 5 (repete enquanto i for 0, 1, 2, 3, 4 -- total de 5 vezes)
-    // i++ (soma +1 no i a cada volta)
+    // Usando 'for' porque ja sabemos o numero exato de passos (5).
     for (i = 0; i < 5; i++) {
         printf("Direita\n");
     }
@@ -31,11 +27,10 @@ int main() {
 
     i = 0; // Resetando o contador para o proximo loop
     
-    // Usando 'while' (enquanto) para fazer a mesma coisa.
-    // Ele checa a condicao (i < 5) ANTES de rodar o bloco.
+    // Usando 'while' (enquanto)
     while (i < 5) {
         printf("Cima, Direita\n");
-        i++; // O incremento é feito DENTRO do loop
+        i++; // O incremento e feito DENTRO do loop
     }
 
     // ---------------------------------------------
@@ -46,13 +41,31 @@ int main() {
 
     i = 0; // Resetando o contador mais uma vez
 
-    // Usando 'do-while' (faca... enquanto) para a terceira peca.
-    // A diferenca é que ele executa o bloco primeiro 
-    // e so testa a condicao (i < 8) no final.
+    // Usando 'do-while' (faca... enquanto)
     do {
         printf("Esquerda\n");
         i++; // Incremento manual
     } while (i < 8); 
+
+    // ---------------------------------------------
+    // 4. Movimento do Cavalo (Nível Aventureiro)
+    // Objetivo: 2 casas para baixo, 1 para a esquerda
+    // ---------------------------------------------
+    printf("\n--- Movimento do Cavalo (2 Baixo, 1 Esquerda) ---\n");
+
+    // O professor pediu um 'for' e um 'while/do-while'
+    
+    // 1. Usando 'for' para os 2 passos para baixo
+    for (i = 0; i < 2; i++) {
+        printf("Baixo\n");
+    }
+
+    // 2. Usando 'while' para o 1 passo para a esquerda
+    i = 0; // Resetando o contador
+    while (i < 1) {
+        printf("Esquerda\n");
+        i++;
+    }
 
     printf("\nSimulacao concluida!\n");
 

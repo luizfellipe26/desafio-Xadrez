@@ -1,22 +1,20 @@
-# Desafio Xadrez - Nível Novato
+# Desafio Xadrez - Nível Aventureiro
 
-NOME > Luiz Fellipe Rodrigues da Silva
+**Aluno:** Luiz Fellipe Rodrigues da Silva
 
 ---
 
-Esse é mais um projeto para a matéria, agora o desafio é sobre o Xadrez.
+Esse é mais um projeto para a matéria, agora atualizado para o **Nível Aventureiro**.
 
-Olá sou iniciante como programador, então fazer esse trabalho em C foi um desafio bem interessante. Usar os diferentes tipos de loops (`for`, `while`, `do-while`) foi uma experiência bem legal para aprender mais sobre a linguagem, que estou a cada dia mais aprendendo.
+Meu foco principal de estudos é em Python, então fazer esse trabalho em C foi um desafio de verdade. Continuar evoluindo o projeto e usando os diferentes loops (`for`, `while`, `do-while`) foi uma experiência bem legal para aprender mais sobre a linguagem.
 
-### O que o código faz:
+### O que o código faz agora:
 
-O programa `xadrez.c` é um simulador bem simples de movimentos de peças de xadrez no terminal. Ele não tem um jogo, só mostra o caminho das peças.
+O programa `xadrez.c` ainda simula os movimentos da **Torre**, **Bispo** e **Rainha** do Nível Novato, cada um com um loop diferente.
 
-* **Torre:** Usa um loop `for` para se mover 5 casas para a Direita.
-* **Bispo:** Usa um loop `while` para se mover 5 casas na diagonal (Cima, Direita).
-* **Rainha:** Usa um loop `do-while` para se mover 8 casas para a Esquerda.
+A novidade do Nível Aventureiro é a **movimentação do Cavalo**.
 
-O objetivo era praticar como usar cada um dos três tipos de loop do C.
+Para fazer o movimento em "L" (dois passos para baixo e um para esquerda), eu usei um loop `for` para simular os dois passos para "Baixo" e, em seguida, um loop `while` para simular o passo para "Esquerda", como foi pedido no desafio.
 
 ### Para testar
 
@@ -31,45 +29,41 @@ O objetivo era praticar como usar cada um dos três tipos de loop do C.
 ---
 ---
 
-## Descrição Original do Desafio
+## Descrição Original do Desafio (Nível Aventureiro)
 
-### Desafio: nível novato
+### Desafio: nível aventureiro
 
-Movimentando as Peças do xadrez
+Movimentando o Cavalo
 
-Este desafio foca na movimentação das peças de xadrez usando estruturas de repetição em C. Você aplicará o que aprendeu sobre for, while e do-while para simular movimentos no tabuleiro.
+Neste desafio, você dará continuidade ao programa do nível básico, adicionando a lógica para movimentar o Cavalo no tabuleiro de xadrez. A principal diferença é que o Cavalo se move em "L", o que exigirá o uso de loops aninhados (um loop dentro do outro) para simular esse movimento.
 
 **O que você vai fazer**
 
-Você deverá criar um único programa em C que simule o movimento de três peças: Torre, Bispo e Rainha. Para cada peça, utilize uma estrutura de repetição diferente (for, while ou do-while) para simular seu movimento. O programa deverá imprimir no console a direção do movimento a cada casa percorrida pela peça.
-
-- **Torre:** Move-se em linha reta horizontalmente ou verticalmente. Seu programa deverá simular o movimento da Torre cinco casas para a direita.
-- **Bispo:** Move-se na diagonal. Seu programa deverá simular o movimento do Bispo cinco casas na diagonal para cima e à direita. Para representar a diagonal, você imprimirá a combinação de duas direções a cada casa (ex: "Cima, Direita").
-- **Rainha:** Move-se em todas as direções. Seu programa deverá simular o movimento da Rainha oito casas para a esquerda.
+Você deverá implementar, no mesmo programa em C do desafio anterior, a lógica para o movimento do Cavalo. O Cavalo se move duas casas em uma direção (horizontal ou vertical) e depois uma casa perpendicularmente, formando um "L". Para este desafio, o Cavalo deverá se mover duas casas para baixo e uma casa para a esquerda. Você precisará usar pelo menos dois loops aninhados, sendo um deles obrigatoriamente um loop for. O outro loop pode ser while ou do-while, à sua escolha. Assim como nas outras peças, você imprimirá a direção do movimento a cada casa percorrida.
 
 **Requisitos funcionais**
 
-- **Entrada de Dados:** Os valores para o número de casas a serem movidas serão definidos diretamente no código através de variáveis ou constantes.
-- **Lógica de Movimentação:** Cada programa deverá implementar a lógica de movimento específica de cada peça (Torre, Bispo, Rainha).
-- **Saída de Dados:** O programa deverá imprimir no console a direção do movimento a cada casa percorrida pela peça. Para movimentos na diagonal (Bispo), imprimir a combinação de duas direções. Utilize o comando printf para exibir as informações. As saídas devem seguir o padrão: `printf("Cima\n");`, `printf("Baixo\n");`, `printf("Esquerda\n");`, `printf("Direita\n");`, `printf("Cima Esquerda\n");` `printf("Direita\n");`
+- **Entrada de Dados:** Os valores para o número de casas a serem movidas (duas para baixo, uma para a esquerda) devem ser definidos no código como variáveis ou constantes.
+- **Lógica de Movimentação:** O programa deverá implementar a lógica específica do movimento em "L" do Cavalo usando loops aninhados (um loop for e um loop while ou do-while).
+- **Saída de Dados:** O programa deverá imprimir no console a direção de cada etapa do movimento do Cavalo ("Baixo", "Baixo", "Esquerda"), utilizando o comando printf. Para as outras peças as saídas devem seguir o padrão: `printf("Cima\n");`, `printf("Baio\n");`, `printf("Esquerda\n");`, `printf("Direita\n");`. Separe o movimento do Cavalo dos movimentos anteriores com uma linha em branco.
 
 **Requisitos não funcionais**
 
 - **Performance:** O código deve ser eficiente e executar sem atrasos perceptíveis.
-- **Documentação:** O código deve ser bem documentado com comentários explicando a lógica de cada parte.
-- **Legibilidade:** O código deve ser claro, organizado e fácil de entender, com nomes de variáveis descritivos e indentação adequada. Utilize apenas variáveis do tipo inteiro e string.
+- **Documentação:** O código deve ser bem documentado com comentários claros, explicando a lógica do movimento do Cavalo e a utilização dos loops aninhados.
+- **Legibilidade:** O código deve ser claro, organizado, fácil de entender, com nomes de variáveis descritivos, indentação adequada e seguindo as boas práticas de programação em C. Utilize apenas variáveis do tipo inteiro e string.
 
-**Simplificações para o nível básico**
+**Simplificações para o nível intermediário**
 
 - Não é necessário validar a entrada do usuário.
-- Não é necessário implementar a lógica completa do jogo de xadrez, apenas a simulação do movimento de cada peça individualmente.
-- Utilize apenas as estruturas de repetição for, while e do-while, uma para cada peça do jogo.
+- Não é necessário implementar outras regras do xadrez além do movimento específico do Cavalo solicitado.
+- Você pode assumir que o Cavalo sempre começa na posição inicial (definida por você).
 
 **Entregando seu projeto**
 
-- Desenvolva o projeto no GitHub em um repositório público.
-- O projeto deve conter um único arquivo em C (ex: xadrez.c).
-- Cada arquivo deve conter o código-fonte da simulação do movimento da respectiva peça, com comentários explicativos.
-- Após finalizar o projeto, envie o link do seu repositório do GitHub no SAVA, na atividade correspondente a este desafio. Certifique-se de que o link permita acesso ao código.
+- Continue desenvolvendo o projeto no mesmo repositório do GitHub do desafio anterior.
+- Atualize o arquivo xadrez.c com a implementação do movimento do Cavalo, mantendo o código das peças anteriores.
+- Certifique-se de que todos os requisitos funcionais e não funcionais sejam atendidos.
+- Após finalizar o projeto, envie o link atualizado do seu repositório do GitHub no SAVA, na atividade correspondente a este desafio.
 
-Lembre-se: este desafio visa avaliar sua compreensão e aplicação prática das estruturas de repetição em C. Demonstre suas habilidades de forma organizada e eficiente
+Lembre-se: este desafio avalia sua capacidade de aplicar loops aninhados para resolver um problema específico. Demonstre suas habilidades de forma clara, concisa e eficiente!
